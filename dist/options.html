@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Sales Navigator Export - Options</title><style>body {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        color: #333;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .section {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin: 0 0 20px;
+        color: #0073b1;
+      }
+
+      h2 {
+        margin: 0 0 15px;
+        color: #0073b1;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      input[type="number"] {
+        width: 100px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      button {
+        background-color: #0073b1;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: background-color 0.2s;
+      }
+
+      button:hover {
+        background-color: #006097;
+      }
+
+      .status {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        display: none;
+      }
+
+      .status.success {
+        background-color: #d4edda;
+        color: #155724;
+        display: block;
+      }
+
+      .status.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        display: block;
+      }</style><script defer="defer" src="js/options.js"></script></head><body><div class="container"><div class="section"><h1>Sales Navigator Export Options</h1><div class="form-group"><h2>Scraping Settings</h2><label for="delayMin">Minimum Delay (ms):</label> <input type="number" id="delayMin" min="1000" step="500" value="2000"/> <label for="delayMax">Maximum Delay (ms):</label> <input type="number" id="delayMax" min="2000" step="500" value="5000"/> <label for="maxProfiles">Maximum Profiles:</label> <input type="number" id="maxProfiles" min="10" step="10" value="100"/></div><div class="form-group"><h2>Fields to Export</h2><div class="checkbox-group"><div class="checkbox-item"><input type="checkbox" id="fieldName" checked="checked"/> <label for="fieldName">Name</label></div><div class="checkbox-item"><input type="checkbox" id="fieldTitle" checked="checked"/> <label for="fieldTitle">Title</label></div><div class="checkbox-item"><input type="checkbox" id="fieldCompany" checked="checked"/> <label for="fieldCompany">Company</label></div><div class="checkbox-item"><input type="checkbox" id="fieldLocation" checked="checked"/> <label for="fieldLocation">Location</label></div><div class="checkbox-item"><input type="checkbox" id="fieldProfileUrl" checked="checked"/> <label for="fieldProfileUrl">Profile URL</label></div><div class="checkbox-item"><input type="checkbox" id="fieldLinkedInUrl" checked="checked"/> <label for="fieldLinkedInUrl">LinkedIn URL</label></div></div></div><button id="saveBtn">Save Settings</button><div id="status" class="status"></div></div></div><script src="js/options.js"></script></body></html>
