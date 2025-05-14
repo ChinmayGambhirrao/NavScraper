@@ -1,4 +1,11 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Sales Navigator Export</title><style>body {
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sales Navigator Export</title>
+    <style>
+      body {
         width: 320px;
         padding: 16px;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -88,4 +95,39 @@
         font-size: 13px;
         margin-top: 8px;
         display: none;
-      }</style><script defer="defer" src="js/popup.js"></script></head><body><div class="container"><div class="warning"><strong>⚠️ Important Warning</strong> This tool automates actions on LinkedIn Sales Navigator and is against their Terms of Service. Use at your own risk. Your account could be restricted or banned. Avoid exporting large amounts of data quickly.</div><div class="controls"><button id="startBtn">Start Export</button> <button id="stopBtn">Stop Export</button></div><div class="progress"><div class="status">Profiles scraped: <span id="profilesCount">0</span></div><div class="status">Current page: <span id="currentPage">1</span></div></div><div id="error" class="error"></div></div><script src="js/popup.js"></script></body></html>
+      }
+    </style>
+    <script defer="defer" src="js/popup.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="warning">
+        <strong>⚠️ Important Warning</strong> This tool automates actions on
+        LinkedIn Sales Navigator and is against their Terms of Service. Use at
+        your own risk. Your account could be restricted or banned. Avoid
+        exporting large amounts of data quickly.
+      </div>
+      <div class="controls">
+        <input
+          id="profileLimit"
+          type="number"
+          min="1"
+          max="1000"
+          value="100"
+          style="width: 80px; margin-right: 8px"
+          placeholder="Profiles"
+        />
+        <button id="startBtn">Start Export</button>
+        <button id="stopBtn">Stop Export</button>
+      </div>
+      <div class="progress">
+        <div class="status">
+          Profiles scraped: <span id="profilesCount">0</span>
+        </div>
+        <div class="status">Current page: <span id="currentPage">1</span></div>
+      </div>
+      <div id="error" class="error"></div>
+    </div>
+    <script src="js/popup.js"></script>
+  </body>
+</html>
